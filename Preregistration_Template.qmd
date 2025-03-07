@@ -1,0 +1,298 @@
+---
+title: "Preregistration Template - Choice Experiments"
+format:
+  pdf:
+    number-sections: false
+    number-depth: 2
+
+bibliography: references.bib
+
+filters: 
+  - quarto
+  - independent-headers.lua
+
+profiles:
+  answers: 
+    metadata:
+      title: "Preregistration Template - Choice Experiments with Answers"
+---
+
+# Part A: General Information {.unnumbered .unlisted}
+
+## Summary of the study 
+
+*Provide a summary of the whole study/survey and provide details that are relevant to understand the background of the study and survey in general. This can be extensive if necessary but should be kept brief*
+
+::: {.content-visible when-profile="answers"}
+The study aims to estimate the value of urban green with different methods. A representative quota sample is taken from a panel with German adults from the fourteenth biggest cities in Germany. The survey has been conducted twice in 2020 and 2022. While the survey contains three valuation methods (hedonic pricing, life satisfaction, choice experiment), this pre-registration is only for the choice experiment. The questionnaire includes several other questions on socio-demographics, housing characteristics...
+:::
+
+## What are your research questions and/or hypotheses?
+
+*Briefly but precisely state all research questions and hypotheses of this study.*
+
+::: {.content-visible when-profile="answers"}
+H1: Living closer to an urban green space increases utility\
+H2: People prefer more natural urban green spaces to less natural ones\
+H3: People are willing to pay a higher rent for closer urban green spaces to their home and for more naturalness of this urban green space\
+H4: Preferences for distance to urban green space and naturalness differ between cities and socio-demographics of respondents\
+H5: Providing additional information on the effect of naturalness of urban green on the urban heat island effect increases the willingness to pay for more natural urban green spaces.\
+H6: Providing additional information on the effect of naturalness of urban green on the urban heat island effect does not increase the willingness to pay for closer distances to the park.\
+H7: Providing additional information on the effect of naturalness of urban green on the urban heat island effect does not change the marginal utility of income.
+:::
+
+## What is the format of the survey instrument?
+
+*Elaborate on the survey instrument. Subquestions could be: Is it online or offline? Is the survey programmed by you or by an external company? Who is collecting the data? How long is the questionnaire?*
+
+::: {.content-visible when-profile="answers"}
+The survey is carried out online with a web questionnaire designed in “LimeSurvey”. The data is collected by the survey company “IMUG” from a representative panel provided by Gapfish.
+:::
+
+## Motivate and describe your sampling approach
+
+*Describe your sampling strategy in detail and provide reasons for it. If it was not a random sample, why not? Are you using quotas to achieve a representative sample? Who is your target population? Do you use screening questions?*
+
+::: {.content-visible when-profile="answers"}
+The sample should be representative at the country level with respect to gender, monthly household income, and age. We ensure this by using quotas. The sample only consists of people who live in a rented apartment or house. People who live in their own apartment or house were screened out at the beginning of the survey.
+:::
+
+## How did you incentivize your sample?
+
+*Describe how respondents are compensated for completing the questionnaire. If you use individual incentives (e.g. as in a real choice experiment), explain how it works.*
+
+::: {.content-visible when-profile="answers"}
+Respondents receive a payment for completing the questionnaire. The payment procedure is handled by the survey company.
+:::
+
+## How did you determine the sample size?
+
+*Describe any power calculations you conducted or any other strategy you used to determine your sample size. Many surveys are restricted by a budget, which could also be mentioned here as a reason. However, a power calculation is recommended even in this case.*
+
+::: {.content-visible when-profile="answers"}
+The sample size is restricted to our budget. However, we have conducted two similar surveys with similar sample sizes before, indicating that the current sample size is sufficient to test our hypotheses. We did not conduct a power analysis.
+:::
+
+
+## Did you conduct any pre-studies to develop the DCE and questionnaire? Please describe the procedure.
+
+*Describe the procedure to develop your questionnaire. This could include focus groups, expert interviews, a research project etc.*
+
+::: {.content-visible when-profile="answers"}
+We draw from the two earlier studies. The results from the earlier studies are accepted for publication in Land Economics. The earlier studies were extensively pre-tested as described in the paper “The value of naturalness of urban green spaces: Evidence from a discrete choice experiment”:
+“[...] the survey was pretested from the 15th of April 2020 to the 21st of April 2020 with 520 participants, of which 264 respondents answered the pretest completely. We used this pretest sample to assess the suitability of our survey, the comprehensibility of the questions, and to design the choice sets.”
+
+and
+
+“The graphical scale was originally developed by several expert panel meetings of biologists and economists to reflect an increasing index of biodiversity and ecosystem services (such as water purification and carbon sequestration). It was validated and slightly revised in the three focus group discussions, where respondents were asked among the others (i) “What do you understand by the term ‘naturalness’? (ii) “What characteristics does a near-natural green space have for you?” (iii) rank the five illustrations by the degree of naturalness.”
+
+
+Bronnmann, Julia, Liebelt, Veronika, Marder, Fabian, Meya, Jasper and Quaas, Martin F., 2022 “The Value of Naturalness of Urban Green Spaces: Evidence From a Discrete Choice Experiment”, Land Economics (2023)  	
+
+
+
+We have also conducted a pre-test with N=200. Based on the results, we slightly modified the questionnaire.
+
+:::
+
+
+## Anything else you want to mention regarding survey information:
+
+*A free text if anything important has not been captured so far.*
+
+::: {.content-visible when-profile="answers"}
+No additional remarks.
+:::
+
+
+
+# Part B: Experimental Design
+
+## Describe the choice situation or good to be valued
+
+*Provide a detailed explanation of the choice situation. What is the good to be valued. How is the scope and time frame defined. For environmental economics applications, describe the extent of the proposed change and the extent of the market. As a good orientation, see @johnston2017contemporary*
+
+::: {.content-visible when-profile="answers"}
+In the setting of the choice experiment, the respondents are told that they should imagine that the local city authorities are planning to restructure the individually most visited urban green space of the respondent. The restructuring affects the naturalness of the green space and the walking distance to the green space. In the choice situation, the respondents can choose between the status quo and two alternative restructuring programs, which come with additional monthly costs via the incidental rental...
+:::
+
+##  Which attributes (and respective levels) are you using?
+
+*For each attribute in your survey, provide a clear and concise description. Also explain each level if needed.*
+
+::: {.content-visible when-profile="answers"}
+The attributes are the naturalness of the urban green space, the walking distance to the urban green space and the monthly rent in € per month. 
+The levels for naturalness are hardly natural, little natural, partly natural, nearly natural, and very natural, which are defined by a self-developed graphical scale (see attachment). 
+The levels for the walking distance are based on the reported walking distance of the respondents in the survey. The levels are -50%, +50%, +100%, +200%, and +400% of the actual reported walking distance. The figures are presented in absolute values.
+The levels for the monthly rent are based on the actual rent reported in the survey. The levels are -1%, -0.5%, +0.5%, +1%, +2%, and +5% of the actual rent. The figures are presented in absolute values.
+Before the choice experiment the respondents were asked about the current value of the attributes. This information was used in the choice experiment. For example, if a respondent stated the current distance is 100 meters, the displayed levels in the choice cards are 50m, 150m, 200m, 300m, 500m. The survey was programmed in a way that the absolute values where calculated during survey conduction.
+
+:::
+
+
+##  List the number of alternatives per choice set, the number of choice sets in total and any blocks or random assignments if applicable:
+
+*You can use a table here. In cases that the number of alternatives varied, or that you used different split samples for different attributes, elaborate this here.*
+
+::: {.content-visible when-profile="answers"}
+There are three alternatives per choice set and 30 choice sets in total. The choice sets are randomly assigned to the respondents, ensuring that each respondent faces ten choice sets.
+:::
+
+
+##  Describe how attributes were developed and tested:
+
+*Describe the process of attribute and attribute level development. For example focus groups, literature review, project requirements, experts interviews etc.*
+
+::: {.content-visible when-profile="answers"}
+The attributes selected for the choice experiment were based on literature review and expert consultations to ensure relevance and comprehensibility.
+:::
+
+##  Explain any preliminary tests or pilot studies conducted:
+
+*As attribute selection is a critical step in survey development, a proper way of testing attributes and levels is required. Explain this process here.*
+
+::: {.content-visible when-profile="answers"}
+Pilot studies were conducted to refine the survey instruments and choice sets based on respondent feedback and preliminary analysis.
+:::
+
+
+
+##  Which socio-demographic and other case-specific variables do you need to test your hypotheses?
+
+*Case-specific variables are variables that do not vary between alternatives but vary accross respondents. These variabels could include all variables that you plan to integrate into your utility function, including dummies for split samples. If not applicable, leave blank.*
+
+::: {.content-visible when-profile="answers"}
+We need the treatment dummies to test H5. We need the respondent’s city and socio-demographic variables like age, gender, income, and household size to test H3. These variables were integrated into the design by collecting them through the survey and using them in the analysis phase.
+:::
+
+## Which assumptions on the utility function did you use to generate the design?
+
+*Do you use a utility maximisation framework? Which coding for your attribute levels do you plan to use? How do you specify interaction variables? Do you use non-linear specifications of some attributes (e.g. logarithm, quadratic)?*
+
+::: {.content-visible when-profile="answers"}
+We assumed a multinomial logit model with continuous attributes. We assumed that people choose according to random utility maximization.
+:::
+
+## How did you create your experimental design?
+
+When you do your design with a specific software (NGENE, `spdesign` in R etc.), describe all assumptions (utility specification, optimization routine etc.)
+
+::: {.content-visible when-profile="answers"}
+The design used was orthogonal, and it was based on priors taken from a previous study conducted in 2020. The design included two unlabeled alternatives ("Program 1", "Program 2") and one status quo ("My current situation").
+:::
+
+## If an efficient design, which priors did you use, and how did you obtain them?
+
+*Some researchers use small priors indicating the sign of the parameters, others use priors based on assumptions or previous studies. Be concise and transparent which ones you use.*
+
+::: {.content-visible when-profile="answers"}
+We used the priors obtained from the pretesting phase, which involved a detailed analysis of initial responses to refine the utility functions.
+:::
+
+## Did you test the design, e.g., with simulation?
+
+*Monte-Carlo simulations are a good way to test the design for unbiasedness, power and efficiency, and can help you to justify your design choice. In R you can use* `simulateDCE` [@simdce]. *If you did not use simulation, describe how you decided for the design you choose and what other designs you have compared it to.*
+
+::: {.content-visible when-profile="answers"}
+No, the design was not tested with simulation but was based on theoretical constructs and previous empirical evidence.
+:::
+
+## Do you use an additional split sample approach (between-subject design)?
+
+*Split-sample approaches are frequently used to test methodical research questions or to randomize undesired effects. If you have different versions of your questionnaire that can influence the estimated parameters, explain them and why you used them.*
+
+::: {.content-visible when-profile="answers"}
+Yes, the sample is split into three groups to test the effect of different information treatments on respondent choices.
+:::
+
+## Do you randomize the order of choice sets, alternatives and attributes?
+
+*In most cases, it is recommended to randomize the order of choice sets, alternatives and attributes to avoid undesired effects (e.g. left right bias). Note down if you do this, or if you do not do this, explain why not.*
+
+::: {.content-visible when-profile="answers"}
+We randomize the order of the choice sets but not the attributes to maintain consistency across sessions.
+:::
+
+## Do you use an opt-out option or a status quo?
+
+*Quickly state if you use an opt-out or status quo alternative as an alternative is your choice set. If you do not use any, you can state that you use a forced choice experiment.*
+
+::: {.content-visible when-profile="answers"}
+Yes, a status quo option is used, defined based on the responses given by the individual participant at an earlier stage in the questionnaire.
+:::
+
+## How do you define the status quo?
+
+*The definition of the status quo is crucial for the interpretation of the results. Note down how it is described to the respondents.*
+
+::: {.content-visible when-profile="answers"}
+The status quo is defined as the current situation of the respondent regarding the attributes being studied.
+:::
+
+## Are your attributes constant or adapt to the status quo?
+
+*If the status Quo is constant for all respondents describe where you got the constant values from. If it varies between respondents, describe how.*
+
+::: {.content-visible when-profile="answers"}
+The levels of the naturalness attribute are constant, while the levels for walking distance and monthly rental payment adapt to the status quo.
+:::
+
+## Anything else you want to mention regarding experimental design:
+
+*A free text if anything important has not been captured so far.*
+
+::: {.content-visible when-profile="answers"}
+No additional remarks.
+:::
+
+
+
+# Part C: Estimation
+
+## 24. Describe your estimation strategy and any software used:
+
+*Describe generally how you estimate your models (e.g. maximum likelihood) and which software you will use to estimate models.*
+
+::: {.content-visible when-profile="answers"}
+Estimation will be performed using Stata and R, focusing on mixed logit models to capture random parameter variability and accommodate unobserved heterogeneity.
+:::
+
+
+
+## Which discrete choice models do you plan to estimate?
+
+*Here, you can list all models that you plan to estimate. Often, the final model choice is an empirical question, and it is totally fine to leave it open which model you will finally use. However, you can still state which models, and which specifications, you estimate and compare to each other.*
+
+::: {.content-visible when-profile="answers"}
+We rely on random utility theory and will estimate random parameters logit models, conditional logit models, and latent class logit models.
+:::
+
+# Part D: General
+
+## Which inference criteria do you use?
+
+*Which tests do you apply to test your hypotheses and which significance level do you use to decide on your conclusions. If you do not use formal testing or different testing approaches, describe them.*
+
+::: {.content-visible when-profile="answers"}
+We use z-Tests at a 5% level, employing robust standard errors to handle potential heteroskedasticity in the data.
+:::
+
+# Part E: Validity
+
+## Do you use any measures to enhance validity and reduce hypothetical bias?
+
+*The stated preferences literature suffers from validity issues and hypothetical bias and other biases. Several measures have been developed to counteract these biases. Explain in detail which ones you use and if not, why not. See @johnston2017contemporary for best practices.*
+
+::: {.content-visible when-profile="answers"}
+We include questions on consequentiality perceptions after the choice experiment, employ cheap talk scripts, and conduct ex-ante and ex-post validations of respondent understanding.
+:::
+
+
+## Resources
+
+::: {.content-visible when-profile="answers"}
+Please add any resources which are relevant to understand your experiment\
+Screenshot of choice sets: Yes\
+Link to questionnaire or questionnaire pdf: Yes\
+Code for simulation: No
+:::
