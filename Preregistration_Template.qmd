@@ -5,6 +5,11 @@ format:
     number-sections: false
     number-depth: 2
 
+  html:
+    number-sections: false
+    number-depth: 2
+    self-contained: true
+
 bibliography: references.bib
 
 filters: 
@@ -12,7 +17,7 @@ filters:
   - independent-headers.lua
 
 profiles:
-  answers: 
+  answers:
     metadata:
       title: "Preregistration Template - Choice Experiments with Answers"
 ---
@@ -139,30 +144,28 @@ There are three alternatives per choice set and 30 choice sets in total. The cho
 :::
 
 
-##  Describe how attributes were developed and tested:
+##  How did you code your attributes
 
-*Describe the process of attribute and attribute level development. For example focus groups, literature review, project requirements, experts interviews etc.*
-
-::: {.content-visible when-profile="answers"}
-The attributes selected for the choice experiment were based on literature review and expert consultations to ensure relevance and comprehensibility.
-:::
-
-##  Explain any preliminary tests or pilot studies conducted:
-
-*As attribute selection is a critical step in survey development, a proper way of testing attributes and levels is required. Explain this process here.*
+*This is specific for your design. Which coding did you use to generate your design. Examples are dummy coding, linear, relative to a status quo, etc.*
 
 ::: {.content-visible when-profile="answers"}
-Pilot studies were conducted to refine the survey instruments and choice sets based on respondent feedback and preliminary analysis.
+In the design, the attributes were coded linearly with the relative values. 
 :::
 
 
 
-##  Which socio-demographic and other case-specific variables do you need to test your hypotheses?
 
-*Case-specific variables are variables that do not vary between alternatives but vary accross respondents. These variabels could include all variables that you plan to integrate into your utility function, including dummies for split samples. If not applicable, leave blank.*
+
+
+
+
+##  Did you integrate socio-demographic and other case-specific variables in the design process, and if yes how?
+
+
+*Case-specific variables are variables that do not vary between alternatives but vary across respondents. These variables could include all variables that you plan to integrate into your utility function, including dummies for split samples. If not applicable, leave blank.*
 
 ::: {.content-visible when-profile="answers"}
-We need the treatment dummies to test H5. We need the respondent’s city and socio-demographic variables like age, gender, income, and household size to test H3. These variables were integrated into the design by collecting them through the survey and using them in the analysis phase.
+We need the treatment dummies to test H5. We need the respondent’s city and socio-demographic variables age, gender, income, household size to test H3. These variables were not included in the experimental design.
 :::
 
 ## Which assumptions on the utility function did you use to generate the design?
@@ -175,7 +178,7 @@ We assumed a multinomial logit model with continuous attributes. We assumed that
 
 ## How did you create your experimental design?
 
-When you do your design with a specific software (NGENE, `spdesign` in R etc.), describe all assumptions (utility specification, optimization routine etc.)
+*When you do your design with a specific software (NGENE, `spdesign` in R etc.), describe all assumptions (utility specification, optimization routine etc.)*
 
 ::: {.content-visible when-profile="answers"}
 The design used was orthogonal, and it was based on priors taken from a previous study conducted in 2020. The design included two unlabeled alternatives ("Program 1", "Program 2") and one status quo ("My current situation").
@@ -202,7 +205,9 @@ No, the design was not tested with simulation but was based on theoretical const
 *Split-sample approaches are frequently used to test methodical research questions or to randomize undesired effects. If you have different versions of your questionnaire that can influence the estimated parameters, explain them and why you used them.*
 
 ::: {.content-visible when-profile="answers"}
-Yes, the sample is split into three groups to test the effect of different information treatments on respondent choices.
+We apply a split-sample procedure to test the influence of an information treatment. The sample is splitted into three groups, one uninformed group and two informed groups. The two informed groups differ by how the information is provided. One group is passively provided with information whereas in the other group respondents have to actively decide if they want to be provided with additional information.
+In the information treatment, the respondents read an explanatory paragraph of the urban heat island effect accompanied by a graphical illustration. Another paragraph described that the urban heat island effect can be reduced by more naturalness in urban green. Finally, the respondents could voluntarily click to view a 2 minute video on the urban heat island effect. On the next page, the respondents were asked to respond to two self reference questions and two quiz questions. Additionally, we showed some true and false reasons for the heat island effect and asked respondents which of these reasons were true or false.
+
 :::
 
 ## Do you randomize the order of choice sets, alternatives and attributes?
@@ -259,7 +264,7 @@ Estimation will be performed using Stata and R, focusing on mixed logit models t
 
 
 
-## Which discrete choice models do you plan to estimate?
+## Which discrete choice models do you plan to estimate? If you consider multiple models, specify your preferred specification or model averaging approach (e.g. but not limited to policy recommendations, welfare measures, methodical questions).
 
 *Here, you can list all models that you plan to estimate. Often, the final model choice is an empirical question, and it is totally fine to leave it open which model you will finally use. However, you can still state which models, and which specifications, you estimate and compare to each other.*
 
@@ -267,15 +272,59 @@ Estimation will be performed using Stata and R, focusing on mixed logit models t
 We rely on random utility theory and will estimate random parameters logit models, conditional logit models, and latent class logit models.
 :::
 
-# Part D: General
 
-## Which inference criteria do you use?
+## Do you control for unobserved and observed heterogeneity, if yes, how (e.g. interactions, membership function in latent class model ??
 
-*Which tests do you apply to test your hypotheses and which significance level do you use to decide on your conclusions. If you do not use formal testing or different testing approaches, describe them.*
+*Most applications control for bot unobserved heterogeneity via mixed logit or latent class models and for observed heterogeneity via interation terms between attributes and alternative-specific constants and case-specific variables such as age or gender. List how you plan to deal with heterogeneity.*
 
 ::: {.content-visible when-profile="answers"}
-We use z-Tests at a 5% level, employing robust standard errors to handle potential heteroskedasticity in the data.
+We include unobserved preference heterogeneity by estimating a mixed logit model and observed heterogeneity via interaction terms with attributes.
 :::
+
+
+## Do you estimate separate models for different groups?
+
+*To compare different groups, one can either use interaction terms or estimate separate models for each group. Elaborate if you want to estimate separate models and how you want to compare estimates between models.*
+
+::: {.content-visible when-profile="answers"}
+We estimate one model for each of the 14 cities where we are conducting the choice experiment and one model for all respondents. We also estimate separate models for the different treatments.
+:::
+
+## Do you derive any welfare measures and how?
+
+*Welfare measures can be compensated or equivalent measures, willingness to pay or others. Explain which ones you want to use and how you calculate them.*
+
+::: {.content-visible when-profile="answers"}
+We are interested in obtaining willingness to pay values for the attributes naturalness and walking distance
+:::
+
+
+## If methodical research question, describe in detail how you test your methodical hypotheses.
+
+*There are different approaches to approach methodical research questions. Often, researchers use split samples and then compare results between them using separate models or interaction terms. Explain how you approach your methodical research question and how you plan to test it.*
+
+::: {.content-visible when-profile="answers"}
+We want to compare the effects of the different information treatments. To do so, we estimate separate models and compare coefficients with Poe and Z-tests. Further we estimate a pooled model with treatment dummy interaction terms.
+:::
+
+
+## Describe any additional exploratory analysis you have planned to conduct.
+
+*Sometimes, you have already some other ideas on what to do with the data but are not specific about it. Here, you can elaborate on this.*
+
+::: {.content-visible when-profile="answers"}
+We want to include some attitudinal statements which we model with hybrid choice models.
+:::
+
+
+## Anything else you want to mention regarding estimation:
+
+*A free text if anything important has not been captured so far.*
+
+::: {.content-visible when-profile="answers"}
+No additional remarks.
+:::
+
 
 # Part E: Validity
 
@@ -288,11 +337,75 @@ We include questions on consequentiality perceptions after the choice experiment
 :::
 
 
-## Resources
+## Which follow up questions do you use?
+
+*To ex-post assess the validity of your results, you can use follow up questions, e.g. on consequentiality, comprehension and credibility, how the respondent made their choices, which attributes were perceived etc.*
 
 ::: {.content-visible when-profile="answers"}
-Please add any resources which are relevant to understand your experiment\
-Screenshot of choice sets: Yes\
-Link to questionnaire or questionnaire pdf: Yes\
-Code for simulation: No
+Questions on perceived consequentiality.
+:::
+
+
+
+# Part D: General
+
+## Which inference criteria do you use?
+
+*Which tests do you apply to test your hypotheses and which significance level do you use to decide on your conclusions. If you do not use formal testing or different testing approaches, describe them.*
+
+::: {.content-visible when-profile="answers"}
+We use z-Tests at a 5% level, employing robust standard errors to handle potential heteroskedasticity in the data.
+:::
+
+## Define how you deal with outliers and how you exclude respondents/choices.
+
+*Criteria to determine and exclude outliers should be specified before survey conduction. Criteria could be related for example to survey time. *
+
+::: {.content-visible when-profile="answers"}
+We do not plan to exclude any observations from respondents who have completed the whole survey. We will not include observations from respondents who did not complete the survey.
+
+:::
+
+
+## How do you deal with missing data?
+
+*In surveys, often some datapoints are missing, e.g. if respondents do not answer a specific question. One can exclude such respondents or use imputation methods. Explain your strategy. *
+
+::: {.content-visible when-profile="answers"}
+We will exclude respondents who have not responded to variables which we use in our models.
+
+:::
+
+## Anything else you want to preregister:
+
+*A free text if anything important has not been captured so far.*
+
+::: {.content-visible when-profile="answers"}
+No additional remarks.
+:::
+
+## Resources
+
+*Please add any resources which are relevant to understand your experiment*
+Screenshot of choice sets: 
+Link to questionnaire or questionnaire pdf: 
+Code for simulation:
+
+
+
+
+##  Describe how attributes were developed and tested:
+
+*Describe the process of attribute and attribute level development. For example focus groups, literature review, project requirements, experts interviews etc.*
+
+::: {.content-visible when-profile="answers"}
+The attributes selected for the choice experiment were based on literature review and expert consultations to ensure relevance and comprehensibility.
+:::
+
+##  Explain any preliminary tests or pilot studies conducted:
+
+*As attribute selection is a critical step in survey development, a proper way of testing attributes and levels is required. Explain this process here.*
+
+::: {.content-visible when-profile="answers"}
+Pilot studies were conducted to refine the survey instruments and choice sets based on respondent feedback and preliminary analysis.
 :::
