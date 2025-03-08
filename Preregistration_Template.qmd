@@ -4,7 +4,9 @@ format:
   pdf:
     number-sections: false
     number-depth: 2
-
+  docx:
+    number-sections: false
+    number-depth: 2
   html:
     number-sections: false
     number-depth: 2
@@ -387,25 +389,31 @@ No additional remarks.
 ## Resources
 
 *Please add any resources which are relevant to understand your experiment*
-Screenshot of choice sets: 
-Link to questionnaire or questionnaire pdf: 
-Code for simulation:
+
+| Resource                          | Link/Description |
+|------------------------------------|-----------------|
+| Screenshot of choice sets         | [Add Link]      |
+| Link to questionnaire or PDF      | [Add Link]      |
+| Code for simulation               | [Add Link]      |
+| Additional resource 1             |                 |
+| Additional resource 2             |                 |
+| Additional resource 3             |                 |
 
 
 
 
-##  Describe how attributes were developed and tested:
+<!-- ##  Describe how attributes were developed and tested: -->
 
-*Describe the process of attribute and attribute level development. For example focus groups, literature review, project requirements, experts interviews etc.*
+<!-- *Describe the process of attribute and attribute level development. For example focus groups, literature review, project requirements, experts interviews etc.* -->
 
-::: {.content-visible when-profile="answers"}
-The attributes selected for the choice experiment were based on literature review and expert consultations to ensure relevance and comprehensibility.
-:::
+<!-- ::: {.content-visible when-profile="answers"} -->
+<!-- The attributes selected for the choice experiment were based on literature review and expert consultations to ensure relevance and comprehensibility. -->
+<!-- ::: -->
 
-##  Explain any preliminary tests or pilot studies conducted:
+<!-- ##  Explain any preliminary tests or pilot studies conducted: -->
 
-*As attribute selection is a critical step in survey development, a proper way of testing attributes and levels is required. Explain this process here.*
+<!-- *As attribute selection is a critical step in survey development, a proper way of testing attributes and levels is required. Explain this process here.* -->
 
-::: {.content-visible when-profile="answers"}
-Pilot studies were conducted to refine the survey instruments and choice sets based on respondent feedback and preliminary analysis.
-:::
+<!-- ::: {.content-visible when-profile="answers"} -->
+<!-- Pilot studies were conducted to refine the survey instruments and choice sets based on respondent feedback and preliminary analysis. -->
+<!-- ::: -->
