@@ -4,6 +4,7 @@ format:
   pdf:
     number-sections: false
     number-depth: 2
+    keep-tex: true
   docx:
     number-sections: false
     number-depth: 2
