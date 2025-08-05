@@ -329,7 +329,7 @@ No additional remarks.
 :::
 
 
-# Part E: Validity
+# Part D: Validity
 
 ## Do you use any measures to enhance validity and reduce hypothetical bias?
 
@@ -350,7 +350,7 @@ Questions on perceived consequentiality.
 
 
 
-# Part D: General
+# Part E: General
 
 ## Which inference criteria do you use?
 
