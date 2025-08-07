@@ -29,7 +29,7 @@ profiles:
 
 ## Summary of the study 
 
-*Provide a summary of the whole study/survey and provide details that are relevant to understand the background of the study and survey in general. This can be extensive if necessary but should be kept brief*
+*Provide a summary of the whole study/survey and provide details that are relevant to understand the background of the study and survey in general. This can be extensive if necessary but should be kept brief.*
 
 ::: {.content-visible when-profile="answers"}
 The study aims to estimate the value of urban green with different methods. A representative quota sample is taken from a panel with German adults from the fourteenth biggest cities in Germany. The survey has been conducted twice in 2020 and 2022. While the survey contains three valuation methods (hedonic pricing, life satisfaction, choice experiment), this pre-registration is only for the choice experiment. The questionnaire includes several other questions on socio-demographics, housing characteristics...
@@ -37,7 +37,7 @@ The study aims to estimate the value of urban green with different methods. A re
 
 ## What are your research questions and/or hypotheses?
 
-*Briefly but precisely state all research questions and hypotheses of this study.*
+*Briefly but precisely state all research questions and hypotheses of this study. Hypotheses should be testable with the methods described later.*
 
 ::: {.content-visible when-profile="answers"}
 H1: Living closer to an urban green space increases utility\
@@ -104,6 +104,28 @@ We have also conducted a pre-test with N=200. Based on the results, we slightly 
 :::
 
 
+
+## Define how you deal with outliers and how you exclude respondents/choices.
+
+*Criteria to determine and exclude outliers should be specified before survey conduction. Criteria could be related for example to survey time. *
+
+::: {.content-visible when-profile="answers"}
+We do not plan to exclude any observations from respondents who have completed the whole survey. We will not include observations from respondents who did not complete the survey.
+
+:::
+
+
+## How do you deal with missing data?
+
+*In surveys, often some datapoints are missing, e.g. if respondents do not answer a specific question. One can exclude such respondents or use imputation methods. Explain your strategy. *
+
+::: {.content-visible when-profile="answers"}
+We will exclude respondents who have not responded to variables which we use in our models.
+
+:::
+
+
+
 ## Anything else you want to mention regarding survey information:
 
 *A free text if anything important has not been captured so far.*
@@ -147,18 +169,13 @@ There are three alternatives per choice set and 30 choice sets in total. The cho
 :::
 
 
-##  How did you code your attributes
+##  How did you code your attributes to generate your design?
 
 *This is specific for your design. Which coding did you use to generate your design. Examples are dummy coding, linear, relative to a status quo, etc.*
 
 ::: {.content-visible when-profile="answers"}
 In the design, the attributes were coded linearly with the relative values. 
 :::
-
-
-
-
-
 
 
 
@@ -173,7 +190,7 @@ We need the treatment dummies to test H5. We need the respondent’s city and so
 
 ## Which assumptions on the utility function did you use to generate the design?
 
-*Do you use a utility maximisation framework? Which coding for your attribute levels do you plan to use? How do you specify interaction variables? Do you use non-linear specifications of some attributes (e.g. logarithm, quadratic)?*
+*Do you use a utility maximization framework? How do you specify interaction variables? Do you use non-linear specifications of some attributes (e.g. logarithm, quadratic)?*
 
 ::: {.content-visible when-profile="answers"}
 We assumed a multinomial logit model with continuous attributes. We assumed that people choose according to random utility maximization.
@@ -189,7 +206,7 @@ The design used was orthogonal, and it was based on priors taken from a previous
 
 ## If an efficient design, which priors did you use, and how did you obtain them?
 
-*Some researchers use small priors indicating the sign of the parameters, others use priors based on assumptions or previous studies. Be concise and transparent which ones you use.*
+*Some researchers use small priors indicating the sign of the parameters, others use priors based on assumptions or previous studies. Be concise and transparent which ones you use. See for example @BLIEMER2016 and @walker2018d.*
 
 ::: {.content-visible when-profile="answers"}
 We used the priors obtained from the pretesting phase, which involved a detailed analysis of initial responses to refine the utility functions.
@@ -215,7 +232,7 @@ In the information treatment, the respondents read an explanatory paragraph of t
 
 ## Do you randomize the order of choice sets, alternatives and attributes?
 
-*In most cases, it is recommended to randomize the order of choice sets, alternatives and attributes to avoid undesired effects (e.g. left right bias). Note down if you do this, or if you do not do this, explain why not.*
+*In most cases, it is recommended to randomize the order of choice sets, alternatives and attributes [@mariel2021environmental, pp.40 and 94] to avoid undesired effects (e.g. left right bias). Note down if you do this, or if you do not do this, explain why not.*
 
 ::: {.content-visible when-profile="answers"}
 We randomize the order of the choice sets but not the attributes to maintain consistency across sessions.
@@ -223,7 +240,7 @@ We randomize the order of the choice sets but not the attributes to maintain con
 
 ## Do you use an opt-out option or a status quo?
 
-*Quickly state if you use an opt-out or status quo alternative as an alternative is your choice set. If you do not use any, you can state that you use a forced choice experiment.*
+*State if you use an opt-out or status quo alternative as an alternative is your choice set. If you do not use any, you can state that you use a forced choice experiment.*
 
 ::: {.content-visible when-profile="answers"}
 Yes, a status quo option is used, defined based on the responses given by the individual participant at an earlier stage in the questionnaire.
@@ -239,7 +256,7 @@ The status quo is defined as the current situation of the respondent regarding t
 
 ## Are your attributes constant or adapt to the status quo?
 
-*If the status Quo is constant for all respondents describe where you got the constant values from. If it varies between respondents, describe how.*
+*If the status quo is constant for all respondents describe where you got the constant values from. If it varies between respondents, describe how.*
 
 ::: {.content-visible when-profile="answers"}
 The levels of the naturalness attribute are constant, while the levels for walking distance and monthly rental payment adapt to the status quo.
@@ -266,6 +283,14 @@ Estimation will be performed using Stata and R, focusing on mixed logit models t
 :::
 
 
+## Which inference criteria do you use?
+
+*Which tests do you apply to test your hypotheses and which significance level do you use to decide on your conclusions. If you do not use formal testing or different testing approaches, describe them.*
+
+::: {.content-visible when-profile="answers"}
+We use z-Tests at a 5% level, employing robust standard errors to handle potential heteroskedasticity in the data.
+:::
+
 
 ## Which discrete choice models do you plan to estimate? If you consider multiple models, specify your preferred specification or model averaging approach (e.g. but not limited to policy recommendations, welfare measures, methodical questions).
 
@@ -278,7 +303,7 @@ We rely on random utility theory and will estimate random parameters logit model
 
 ## Do you control for unobserved and observed heterogeneity, if yes, how (e.g. interactions, membership function in latent class model ??
 
-*Most applications control for bot unobserved heterogeneity via mixed logit or latent class models and for observed heterogeneity via interation terms between attributes and alternative-specific constants and case-specific variables such as age or gender. List how you plan to deal with heterogeneity.*
+*Most applications control for  unobserved heterogeneity via mixed logit or latent class models and for observed heterogeneity via interaction terms between attributes and alternative-specific constants and case-specific variables such as age or gender. List how you plan to deal with heterogeneity. Guidance on selecting the right model for unobserved heterogeneity can be found in @MARIEL2013 or @SAGEBIEL2017*
 
 ::: {.content-visible when-profile="answers"}
 We include unobserved preference heterogeneity by estimating a mixed logit model and observed heterogeneity via interaction terms with attributes.
@@ -350,42 +375,7 @@ Questions on perceived consequentiality.
 
 
 
-# Part E: General
 
-## Which inference criteria do you use?
-
-*Which tests do you apply to test your hypotheses and which significance level do you use to decide on your conclusions. If you do not use formal testing or different testing approaches, describe them.*
-
-::: {.content-visible when-profile="answers"}
-We use z-Tests at a 5% level, employing robust standard errors to handle potential heteroskedasticity in the data.
-:::
-
-## Define how you deal with outliers and how you exclude respondents/choices.
-
-*Criteria to determine and exclude outliers should be specified before survey conduction. Criteria could be related for example to survey time. *
-
-::: {.content-visible when-profile="answers"}
-We do not plan to exclude any observations from respondents who have completed the whole survey. We will not include observations from respondents who did not complete the survey.
-
-:::
-
-
-## How do you deal with missing data?
-
-*In surveys, often some datapoints are missing, e.g. if respondents do not answer a specific question. One can exclude such respondents or use imputation methods. Explain your strategy. *
-
-::: {.content-visible when-profile="answers"}
-We will exclude respondents who have not responded to variables which we use in our models.
-
-:::
-
-## Anything else you want to preregister:
-
-*A free text if anything important has not been captured so far.*
-
-::: {.content-visible when-profile="answers"}
-No additional remarks.
-:::
 
 ## Resources
 
