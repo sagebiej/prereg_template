@@ -1,10 +1,12 @@
 ---
 title: "Preregistration Template - Choice Experiments"
+doc-version: "May 13, 2026 | Version 0.2"
 format:
   pdf:
     number-sections: false
     number-depth: 2
     keep-tex: true
+
   docx:
     number-sections: false
     number-depth: 2
@@ -17,7 +19,7 @@ bibliography: references.bib
 
 filters: 
   - quarto
-  - independent-headers.lua
+  - preregtemplate.lua
 
 profiles:
   answers:
@@ -274,7 +276,7 @@ No additional remarks.
 
 # Part C: Estimation
 
-## 24. Describe your estimation strategy and any software used:
+## Describe your estimation strategy and any software used:
 
 *Describe generally how you estimate your models (e.g. maximum likelihood) and which software you will use to estimate models.*
 
