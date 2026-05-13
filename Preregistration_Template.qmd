@@ -117,7 +117,7 @@ We do not plan to exclude any observations from respondents who have completed t
 
 ## How do you deal with missing data?
 
-*In surveys, often some datapoints are missing, e.g. if respondents do not answer a specific question. One can exclude such respondents or use imputation methods. Explain your strategy. *
+*In surveys, some data points may be missing, e.g. if respondents do not answer a specific question. One can exclude such respondents or use imputation methods. Explain your strategy. *
 
 ::: {.content-visible when-profile="answers"}
 We will exclude respondents who have not responded to variables which we use in our models.
@@ -162,7 +162,7 @@ Before the choice experiment the respondents were asked about the current value 
 
 ##  List the number of alternatives per choice set, the number of choice sets in total and any blocks or random assignments if applicable:
 
-*You can use a table here. In cases that the number of alternatives varied, or that you used different split samples for different attributes, elaborate this here.*
+*You can use a table here. In cases that the number of alternatives varies, or that you use different split samples for different attributes, elaborate this here.*
 
 ::: {.content-visible when-profile="answers"}
 There are three alternatives per choice set and 30 choice sets in total. The choice sets are randomly assigned to the respondents, ensuring that each respondent faces ten choice sets.
@@ -198,7 +198,7 @@ We assumed a multinomial logit model with continuous attributes. We assumed that
 
 ## How did you create your experimental design?
 
-*When you do your design with a specific software (NGENE, `spdesign` in R etc.), describe all assumptions (utility specification, optimization routine etc.)*
+*When you do your design with a specific software (NGENE, `spdesign` in R etc.), describe all assumptions (utility specification, optimization routine etc.). See for example @scarpa2008design for reporting guidelines of efficient designs.*
 
 ::: {.content-visible when-profile="answers"}
 The design used was orthogonal, and it was based on priors taken from a previous study conducted in 2020. The design included two unlabeled alternatives ("Program 1", "Program 2") and one status quo ("My current situation").
@@ -292,18 +292,18 @@ We use z-Tests at a 5% level, employing robust standard errors to handle potenti
 :::
 
 
-## Which discrete choice models do you plan to estimate? If you consider multiple models, specify your preferred specification or model averaging approach (e.g. but not limited to policy recommendations, welfare measures, methodical questions).
+## Which discrete choice models do you plan to estimate? If you consider multiple models, specify how you select a model or if a model averaging approach will be used.
 
 *Here, you can list all models that you plan to estimate. Often, the final model choice is an empirical question, and it is totally fine to leave it open which model you will finally use. However, you can still state which models, and which specifications, you estimate and compare to each other.*
 
 ::: {.content-visible when-profile="answers"}
-We rely on random utility theory and will estimate random parameters logit models, conditional logit models, and latent class logit models.
+We rely on random utility theory and will estimate random parameters logit models, conditional logit models, and latent class logit models. We select models based on out of sample predictions and measures of fit. If applicable, we use likelihood-ratio tests to compare models. 
 :::
 
 
-## Do you control for unobserved and observed heterogeneity, if yes, how (e.g. interactions, membership function in latent class model ??
+## Do you control for unobserved and observed heterogeneity, if yes, how (e.g. interactions, membership function in latent class model)?
 
-*Most applications control for  unobserved heterogeneity via mixed logit or latent class models and for observed heterogeneity via interaction terms between attributes and alternative-specific constants and case-specific variables such as age or gender. List how you plan to deal with heterogeneity. Guidance on selecting the right model for unobserved heterogeneity can be found in @MARIEL2013 or @SAGEBIEL2017*
+*Most applications control for  unobserved heterogeneity via mixed logit or latent class models and for observed heterogeneity via interaction terms between attributes and alternative-specific constants and case-specific variables such as age or gender. List how you plan to deal with heterogeneity. Guidance on selecting the right model for unobserved heterogeneity can be found in @MARIEL2013 or @SAGEBIEL2017. *
 
 ::: {.content-visible when-profile="answers"}
 We include unobserved preference heterogeneity by estimating a mixed logit model and observed heterogeneity via interaction terms with attributes.
@@ -370,7 +370,7 @@ We include questions on consequentiality perceptions after the choice experiment
 *To ex-post assess the validity of your results, you can use follow up questions, e.g. on consequentiality, comprehension and credibility, how the respondent made their choices, which attributes were perceived etc.*
 
 ::: {.content-visible when-profile="answers"}
-Questions on perceived consequentiality.
+We included questions on perceived consequentiality.
 :::
 
 
@@ -390,7 +390,7 @@ Questions on perceived consequentiality.
 | Additional resource 2             |                 |
 | Additional resource 3             |                 |
 
-
+## Referenced Literature
 
 
 <!-- ##  Describe how attributes were developed and tested: -->
