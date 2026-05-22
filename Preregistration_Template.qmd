@@ -276,12 +276,14 @@ No additional remarks.
 
 # Part C: Estimation
 
-## Describe your estimation strategy and any software used:
+REWRITE THE SECTION AND BE MORE PRECISE ON SPECIFIC ELEMENTS OF ESTIMATION STEPS GIVE OPTION TO PROVIDE CODE. FOKUS AUF BENUTZBARKEIT UND INTUITION
 
-*Describe generally how you estimate your models (e.g. maximum likelihood) and which software you will use to estimate models.*
+## Which software do you use for estimation:
+
+*Name the software and version that you plan to use. If you use different softwares for different purposes or to cross check results, you can describe that here.*
 
 ::: {.content-visible when-profile="answers"}
-Estimation will be performed using Stata and R, focusing on mixed logit models to capture random parameter variability and accommodate unobserved heterogeneity.
+For data preparation we use R. Estimation will be performed using the apollo package in R. Mixed logit models in preference space and willingness to pay space will be cross checked with the Stata functions mixlogit and mixlogitwtp. 
 :::
 
 
@@ -290,25 +292,25 @@ Estimation will be performed using Stata and R, focusing on mixed logit models t
 *Which tests do you apply to test your hypotheses and which significance level do you use to decide on your conclusions. If you do not use formal testing or different testing approaches, describe them.*
 
 ::: {.content-visible when-profile="answers"}
-We use z-Tests at a 5% level, employing robust standard errors to handle potential heteroskedasticity in the data.
+We use z-Tests at a 5% level, employing robust standard errors to account for the panel structure in the data. 
 :::
 
 
 ## Which discrete choice models do you plan to estimate? If you consider multiple models, specify how you select a model or if a model averaging approach will be used.
 
-*Here, you can list all models that you plan to estimate. Often, the final model choice is an empirical question, and it is totally fine to leave it open which model you will finally use. However, you can still state which models, and which specifications, you estimate and compare to each other.*
+*Here, you can list all models that you plan to estimate. Often, the final model choice is an empirical question, and it is totally fine to leave it open which model you will finally use. However, you can still state which models, and which specifications, you estimate and compare to each other. It is also possible to provide a decision tree, containing logical IF-THEN rules.*
 
 ::: {.content-visible when-profile="answers"}
-We rely on random utility theory and will estimate random parameters logit models, conditional logit models, and latent class logit models. We select models based on out of sample predictions and measures of fit. If applicable, we use likelihood-ratio tests to compare models. 
+We rely on random utility theory and estimate random parameters logit models, conditional logit models, and latent class logit models. We select models based on out-of-sample predictions and measures of fit. If applicable, we use likelihood-ratio tests to compare models. 
 :::
 
 
 ## Do you control for unobserved and observed heterogeneity, if yes, how (e.g. interactions, membership function in latent class model)?
 
-*Most applications control for  unobserved heterogeneity via mixed logit or latent class models and for observed heterogeneity via interaction terms between attributes and alternative-specific constants and case-specific variables such as age or gender. List how you plan to deal with heterogeneity. Guidance on selecting the right model for unobserved heterogeneity can be found in @MARIEL2013 or @SAGEBIEL2017. *
+*Most applications control for unobserved heterogeneity via mixed logit or latent class models and for observed heterogeneity via interaction terms between attributes and alternative-specific constants and case-specific variables such as age or gender. List how you plan to deal with heterogeneity. Guidance on selecting the right model for unobserved heterogeneity can be found in @SAGEBIEL2017. Guidance on choosing distributions in mixed logit specifications can be found in @MARIEL2013*
 
 ::: {.content-visible when-profile="answers"}
-We include unobserved preference heterogeneity by estimating a mixed logit model and observed heterogeneity via interaction terms with attributes.
+We include unobserved preference heterogeneity by estimating a mixed logit model and observed heterogeneity via interaction terms with attributes. For mixed logit models we test different distributions of the random parameters. For latent class logit models, we determine the optimal class sizes based on parameter plausibility and BIC. For testing interaction terms, we use likelihood-ratio tests. 
 :::
 
 
