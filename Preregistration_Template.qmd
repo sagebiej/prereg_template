@@ -77,10 +77,21 @@ Respondents receive a payment for completing the questionnaire. The payment proc
 
 ## How did you determine the sample size?
 
-*Describe any power calculations you conducted or any other strategy you used to determine your sample size. Many surveys are restricted by a budget, which could also be mentioned here as a reason. However, a power calculation is recommended even in this case.*
+*State your target sample size and explain how you arrived at it. Four approaches are listed here -- from simple to more rigorous. State whether between-subject effects are included in the sample size calculation and whether power calculations used the same priors as the experimental design.*
+
+*— **Budget or practical constraint**: If your sample size is restricted by budget or other constraints, state that here.  It is still worth doing a brief plausibility check using one of the methods below, e.g. to determine power for different effect sizes.*
+
+*— **Rule of thumb**: A common minimum is $N \geq 500L_{max}/(JS)$, where $L_{max}$ is the largest number of levels for any attribute, $J$ is the number of alternatives (excluding none), and $S$ is the number of choice tasks per respondent [@Orme2010, p.64]. @Assele2023 propose an improved rule of $N \geq 150K/S$, where $K$ is the total number of parameters, which better accounts for model complexity and reduces underestimation compared to Orme's rule, particularly for larger designs. Note that both rules do not account for the desired power or significance level, and tend to underestimate N for mixed logit and latent class models [@Assele2023].*
+
+*— **AVC-based power calculation**: The S-efficiency approach of @RoseBliemer2013 derives the minimum N for which all parameters achieve statistical significance from the asymptotic variance-covariance matrix of the target model, and is implemented as a design criterion in software such as NGENE or spdesign in R [@spdesign]. @deBekkerGrob2015 extend this to a full power calculation by additionally specifying a desired power level $1-\beta$, and provide a step-by-step guide with R code. These approaches only work if the design is known and rely on prior assumptions.*
+
+*— **Simulation-based**: The most flexible approach. Simulate datasets under your assumed data-generating process (utility specification, error variance, parameter priors), estimate the target model, and iterate over values of N until the desired recovery rate or statistical power is achieved. This approach is particularly well-suited for complex models as it allows testing of any model including models with interaction terms, latent variables etc. In R, the `simulateDCE` package [@simulateDCE] supports this workflow.*
+
+*Also state whether subgroup analyses require a larger N, and whether power calculations used the same priors as the experimental design.*
+
 
 ::: {.content-visible when-profile="answers"}
-The sample size is restricted to our budget. However, we have conducted two similar surveys with similar sample sizes before, indicating that the current sample size is sufficient to test our hypotheses. We did not conduct a power analysis.
+Our target sample size is N = 800. The sample size is primarily constrained by the project budget. As a plausibility check, we applied the Johnson & Orme rule of thumb: with $t = 10$ choice tasks, $a = 3$ alternatives, and $c = 5$ levels (the maximum across attributes), the minimum sample size for a main-effects MNL model is $500 \times 5 \,/\, (10 \times 3) \approx 83$. Our target N substantially exceeds this minimum. We did not conduct a formal AVC-based or simulation-based power analysis, as the design was not finalised prior to sample size determination. For subgroup analyses by treatment arm (three groups), each group will contain approximately 267 respondents, which exceeds the commonly recommended minimum of 200 per group.
 :::
 
 
@@ -200,7 +211,7 @@ We assumed a multinomial logit model with continuous attributes. We assumed that
 
 ## How did you create your experimental design?
 
-*When you do your design with a specific software (NGENE, `spdesign` in R etc.), describe all assumptions (utility specification, optimization routine etc.). See for example @scarpa2008design for reporting guidelines of efficient designs.*
+*When you do your design with a specific software (NGENE, `spdesign` in R [@spdesign] etc.), describe all assumptions (utility specification, optimization routine etc.). See for example @scarpa2008design for reporting guidelines of efficient designs.*
 
 ::: {.content-visible when-profile="answers"}
 The design used was orthogonal, and it was based on priors taken from a previous study conducted in 2020. The design included two unlabeled alternatives ("Program 1", "Program 2") and one status quo ("My current situation").
@@ -216,7 +227,7 @@ We used the priors obtained from the pretesting phase, which involved a detailed
 
 ## Did you test the design, e.g., with simulation?
 
-*Monte-Carlo simulations are a good way to test the design for unbiasedness, power and efficiency, and can help you to justify your design choice. In R you can use* `simulateDCE` [@simdce]. *If you did not use simulation, describe how you decided for the design you choose and what other designs you have compared it to.*
+*Monte-Carlo simulations are a good way to test the design for unbiasedness, power and efficiency, and can help you to justify your design choice. In R you can use* `simulateDCE` [@simulateDCE]. *If you did not use simulation, describe how you decided for the design you choose and what other designs you have compared it to.*
 
 ::: {.content-visible when-profile="answers"}
 No, the design was not tested with simulation but was based on theoretical constructs and previous empirical evidence.
