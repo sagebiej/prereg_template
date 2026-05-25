@@ -137,7 +137,32 @@ We will exclude respondents who have not responded to variables which we use in 
 
 :::
 
+## Will you share the data and code after publication?
 
+*Data and code sharing are essential for replicable research and strongly encouraged. 
+Describe where you plan to make data and code available (e.g., OSF, Zenodo, GitHub, 
+Harvard Dataverse). If sharing is not possible, provide a reason — common restrictions 
+include contractual obligations with survey companies, privacy regulations (e.g., GDPR), 
+or confidentiality agreements. Consider whether anonymized data could be shared instead.*
+
+::: {.content-visible when-profile="answers"}
+We will publish the anonymized dataset and all analysis code (data preparation, design 
+generation, estimation) on Zenodo and GitHub upon acceptance. A GDPR-compliant 
+anonymized version of the data will be shared; researchers requiring the full dataset 
+can request access via a data use agreement.
+:::
+
+
+## Will you share the survey instrument?
+
+*The questionnaire and choice cards are essential for assessing validity and enabling 
+replication. Describe whether and where you will share them (e.g., as a supplementary 
+file, on OSF). Note any restrictions if the instrument is proprietary or licensed.*
+
+::: {.content-visible when-profile="answers"}
+The full questionnaire including screenshots of the choice cards will be published as 
+a supplementary file with the paper and on OSF.
+:::
 
 ## Anything else you want to mention regarding survey information:
 
@@ -151,9 +176,11 @@ No additional remarks.
 
 # Part B: Experimental Design
 
+The design stage includes selection of attributes, a clear definition of the choice situation and a statistical design. The design stage is critical to the choice experiment's validity and should be tested extensively. This template does not include best practices, it only reminds on design stages. We highly recommend to align the research on @johnston2017contemporary and @mariel2021environmental. @johnston2017contemporary focuses on best practices for stated preference studies broadly, while @mariel2021environmental provides more hands-on guidance specific to discrete choice experiment design and implementation.
+
 ## Describe the choice situation or good to be valued
 
-*Provide a detailed explanation of the choice situation. What is the good to be valued. How is the scope and time frame defined. For environmental economics applications, describe the extent of the proposed change and the extent of the market. As a good orientation, see @johnston2017contemporary*
+*Provide a detailed explanation of the choice situation. What is the good to be valued. How is the scope and time frame defined. For environmental economics applications, describe the extent of the proposed change and the extent of the market.*
 
 ::: {.content-visible when-profile="answers"}
 In the setting of the choice experiment, the respondents are told that they should imagine that the local city authorities are planning to restructure the individually most visited urban green space of the respondent. The restructuring affects the naturalness of the green space and the walking distance to the green space. In the choice situation, the respondents can choose between the status quo and two alternative restructuring programs, which come with additional monthly costs via the incidental rental...
