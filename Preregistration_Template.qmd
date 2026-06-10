@@ -4,27 +4,19 @@ doc-version: "May 13, 2026 | Version 0.2"
 format:
   pdf:
     number-sections: false
-    number-depth: 2
     keep-tex: true
 
   docx:
     number-sections: false
-    number-depth: 2
   html:
     number-sections: false
-    number-depth: 2
-    self-contained: true
+    embed-resources: true
 
 bibliography: references.bib
 
-filters: 
+filters:
   - quarto
   - preregtemplate.lua
-
-profiles:
-  answers:
-    metadata:
-      title: "Preregistration Template - Choice Experiments with Answers"
 ---
 
 # Part A: General Information {.unnumbered .unlisted}
@@ -176,7 +168,7 @@ No additional remarks.
 
 # Part B: Experimental Design
 
-The design stage includes selection of attributes, a clear definition of the choice situation and a statistical design. The design stage is critical to the choice experiment's validity and should be tested extensively. This template does not include best practices, it only reminds on design stages. We highly recommend to align the research on @johnston2017contemporary and @mariel2021environmental. @johnston2017contemporary focuses on best practices for stated preference studies broadly, while @mariel2021environmental provides more hands-on guidance specific to discrete choice experiment design and implementation.
+The design stage includes selection of attributes, a clear definition of the choice situation and a statistical design. The design stage is critical to the choice experiment's validity and should be tested extensively. This template does not include best practices, it only serves as a reminder of the design stages. We highly recommend to align the research on @johnston2017contemporary and @mariel2021environmental. @johnston2017contemporary focuses on best practices for stated preference studies broadly, while @mariel2021environmental provides more hands-on guidance specific to discrete choice experiment design and implementation.
 
 ## Describe the choice situation or good to be valued
 
@@ -265,7 +257,7 @@ No, the design was not tested with simulation but was based on theoretical const
 *Split-sample approaches are frequently used to test methodical research questions or to randomize undesired effects. If you have different versions of your questionnaire that can influence the estimated parameters, explain them and why you used them.*
 
 ::: {.content-visible when-profile="answers"}
-We apply a split-sample procedure to test the influence of an information treatment. The sample is splitted into three groups, one uninformed group and two informed groups. The two informed groups differ by how the information is provided. One group is passively provided with information whereas in the other group respondents have to actively decide if they want to be provided with additional information.
+We apply a split-sample procedure to test the influence of an information treatment. The sample is split into three groups, one uninformed group and two informed groups. The two informed groups differ by how the information is provided. One group is passively provided with information whereas in the other group respondents have to actively decide if they want to be provided with additional information.
 In the information treatment, the respondents read an explanatory paragraph of the urban heat island effect accompanied by a graphical illustration. Another paragraph described that the urban heat island effect can be reduced by more naturalness in urban green. Finally, the respondents could voluntarily click to view a 2 minute video on the urban heat island effect. On the next page, the respondents were asked to respond to two self reference questions and two quiz questions. Additionally, we showed some true and false reasons for the heat island effect and asked respondents which of these reasons were true or false.
 
 :::
@@ -280,7 +272,7 @@ We randomize the order of the choice sets but not the attributes to maintain con
 
 ## Do you use an opt-out option or a status quo?
 
-*State if you use an opt-out or status quo alternative as an alternative is your choice set. If you do not use any, you can state that you use a forced choice experiment.*
+*State if you use an opt-out or status quo alternative as an alternative in your choice set. If you do not use any, you can state that you use a forced choice experiment.*
 
 ::: {.content-visible when-profile="answers"}
 Yes, a status quo option is used, defined based on the responses given by the individual participant at an earlier stage in the questionnaire.
@@ -419,7 +411,7 @@ We included questions on perceived consequentiality.
 
 
 
-## Resources
+## Resources {.unnumbered}
 
 *Please add any resources which are relevant to understand your experiment*
 
@@ -432,7 +424,7 @@ We included questions on perceived consequentiality.
 | Additional resource 2             |                 |
 | Additional resource 3             |                 |
 
-## Referenced Literature
+## Referenced Literature {.unnumbered}
 
 
 <!-- ##  Describe how attributes were developed and tested: -->

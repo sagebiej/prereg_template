@@ -2,7 +2,7 @@
 subheading_count = 0
 
 function Header(el)
-  if el.level == 2 then
+  if el.level == 2 and not el.classes:includes("unnumbered") then
     -- Increment the counter
     subheading_count = subheading_count + 1
 
@@ -15,7 +15,17 @@ end
 
 
 function Meta(meta)
+  -- Titel im "answers"-Profil ergänzen
+  local profile = os.getenv("QUARTO_PROFILE") or ""
+  if profile:match("answers") and meta.title then
+    local title = pandoc.utils.stringify(meta.title)
+    meta.title = pandoc.MetaInlines(pandoc.Inlines(pandoc.Str(title .. " with Answers")))
+  end
+
   local docversion = pandoc.utils.stringify(meta["doc-version"] or "")
+  if docversion == "" then
+    return meta
+  end
 
   -- Titelseite (alle Formate)
   meta.subtitle = pandoc.MetaInlines(pandoc.read(docversion).blocks[1].content)
