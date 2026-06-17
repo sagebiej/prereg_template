@@ -306,7 +306,7 @@ No additional remarks.
 
 # Part C: Estimation
 
-REWRITE THE SECTION AND BE MORE PRECISE ON SPECIFIC ELEMENTS OF ESTIMATION STEPS GIVE OPTION TO PROVIDE CODE. FOKUS AUF BENUTZBARKEIT UND INTUITION
+Estimation in choice experiments often involves decisions that cannot, and should not, be fixed before seeing the data. This section therefore asks less for binding commitments than for your planned strategy: the models and specifications you intend to explore, the rules you will use to choose among them, and how you will handle deviations. 
 
 ## Which software do you use for estimation:
 
