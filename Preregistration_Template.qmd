@@ -87,7 +87,7 @@ Our target sample size is N = 800. The sample size is primarily constrained by t
 :::
 
 
-## Did you conduct any pre-studies to develop the DCE and questionnaire? Please describe the procedure.
+## Did you conduct any pre-studies to develop the choice experiment and questionnaire? 
 
 *Describe the procedure to develop your questionnaire. This could include focus groups, expert interviews, a research project etc.*
 
@@ -156,6 +156,42 @@ The full questionnaire including screenshots of the choice cards will be publish
 a supplementary file with the paper and on OSF.
 :::
 
+
+## How do you plan to handle deviations from this pre-registration?
+
+*Deviations from a pre-registration are common and not inherently problematic; 
+they can occur due to unforeseen events during data collection, errors detected 
+in the pre-registration itself, information that was missing or underspecified, 
+untested assumptions about respondent behaviour that turn out to be violated, 
+or auxiliary assumptions (e.g. distributional or model assumptions) that are 
+falsified once the data are available [@lakens2024and]. For each deviation that 
+occurs, document (1) what was planned and what was done instead, and why, and 
+(2) whether the deviation is likely to reduce how conclusively your test 
+supports or falsifies your hypotheses, or whether it instead increases the 
+validity of your conclusions. You do not need to anticipate every possible 
+deviation here, but please describe how and where you intend to document 
+deviations should they arise (e.g. in a supplementary file, an amendment to 
+the registration, or in the paper itself).*
+
+::: {.content-visible when-profile="answers"}
+We do not anticipate major deviations from this plan. If deviations do occur, 
+we will document each one in a supplementary file accompanying the analysis 
+code, specifying what was planned, what was done instead, the reason for the 
+change, and whether we judge the deviation to weaken or strengthen the test of 
+the affected hypothesis. For example, if the achieved sample size in one of 
+the 14 cities falls substantially short of the planned quota because the panel 
+provider cannot recruit enough eligible respondents, we will report the 
+achieved sample size, discuss the resulting loss in statistical power, and 
+still estimate the pre-registered model on the available data rather than 
+changing the model to compensate. Similarly, if we find during estimation that 
+the assumed normal distribution for the naturalness parameter is implausible 
+(e.g. based on diagnostic plots or convergence issues), we will additionally 
+report results under a triangular distribution and discuss whether our 
+conclusions on H1-H4 are sensitive to this choice.
+:::
+
+
+
 ## Anything else you want to mention regarding survey information:
 
 *A free text if anything important has not been captured so far.*
@@ -180,14 +216,46 @@ In the setting of the choice experiment, the respondents are told that they shou
 
 ##  Which attributes (and respective levels) are you using?
 
-*For each attribute in your survey, provide a clear and concise description. Also explain each level if needed.*
+*For each attribute in your survey, provide a clear and concise description, 
+and explain each level if needed. Attributes and levels should reflect the 
+information needs of decision-makers, importance to respondents, feasibility/credibility 
+of implementation, and statistical efficiency. Attributes should be clearly defined and, where 
+possible, vary independently of each other [@johnston2017contemporary]. 
+Common approaches to identify and refine attributes include literature 
+review, expert consultation, and focus groups or pre-testing 
+[@mariel2021environmental]. A justification for the choices can also be provided here.*
 
 ::: {.content-visible when-profile="answers"}
-The attributes are the naturalness of the urban green space, the walking distance to the urban green space and the monthly rent in € per month. 
-The levels for naturalness are hardly natural, little natural, partly natural, nearly natural, and very natural, which are defined by a self-developed graphical scale (see attachment). 
-The levels for the walking distance are based on the reported walking distance of the respondents in the survey. The levels are -50%, +50%, +100%, +200%, and +400% of the actual reported walking distance. The figures are presented in absolute values.
-The levels for the monthly rent are based on the actual rent reported in the survey. The levels are -1%, -0.5%, +0.5%, +1%, +2%, and +5% of the actual rent. The figures are presented in absolute values.
-Before the choice experiment the respondents were asked about the current value of the attributes. This information was used in the choice experiment. For example, if a respondent stated the current distance is 100 meters, the displayed levels in the choice cards are 50m, 150m, 200m, 300m, 500m. The survey was programmed in a way that the absolute values where calculated during survey conduction.
+The attributes were selected based on a review of the literature on urban 
+green space valuation and on consultations with urban planners and 
+landscape ecologists involved in the broader research project. Naturalness 
+was included because it is most directly linked to the ecosystem co-benefits 
+(e.g. urban heat mitigation) motivating the study, while distance and rent 
+reflect standard accessibility and cost trade-offs familiar from housing 
+choice. All three attributes vary independently of one another, since none 
+is mechanically determined by the levels of the others. Comprehensibility of 
+the attributes and levels, in particular the graphical naturalness scale, 
+was confirmed in three focus groups (see Section "Did you conduct any 
+pre-studies...").
+
+The attributes are the naturalness of the urban green space, the walking 
+distance to the urban green space and the monthly rent in € per month. 
+The levels for naturalness are hardly natural, little natural, partly 
+natural, nearly natural, and very natural, which are defined by a 
+self-developed graphical scale (see attachment). 
+The levels for the walking distance are based on the reported walking 
+distance of the respondents in the survey. The levels are -50%, +50%, +100%, 
++200%, and +400% of the actual reported walking distance. The figures are 
+presented in absolute values.
+The levels for the monthly rent are based on the actual rent reported in the 
+survey. The levels are -1%, -0.5%, +0.5%, +1%, +2%, and +5% of the actual 
+rent. The figures are presented in absolute values.
+Before the choice experiment the respondents were asked about the current 
+value of the attributes. This information was used in the choice 
+experiment. For example, if a respondent stated the current distance is 
+100 meters, the displayed levels in the choice cards are 50m, 150m, 200m, 
+300m, 500m. The survey was programmed in a way that the absolute values 
+where calculated during survey conduction.
 
 :::
 
@@ -306,7 +374,7 @@ No additional remarks.
 
 # Part C: Estimation
 
-Estimation in choice experiments often involves decisions that cannot, and should not, be fixed before seeing the data. This section therefore asks less for binding commitments than for your planned strategy: the models and specifications you intend to explore, the rules you will use to choose among them, and how you will handle deviations. 
+Estimation in choice experiments often involves decisions that cannot, and should not, be fixed before seeing the data. This section therefore asks less for binding commitments than for your planned strategy: the models and specifications you intend to explore, the rules you will use to choose among them, and how you will handle deviations if the planned strategy does not work as expected.
 
 ## Which software do you use for estimation:
 
