@@ -7,3 +7,6 @@
 *.docx
 *.tex
 .positai
+overleaf_paper
+template/
+*.Rproj
