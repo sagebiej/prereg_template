@@ -1,6 +1,6 @@
 ---
 title: "Preregistration Template - Choice Experiments"
-doc-version: "May 13, 2026 | Version 0.2"
+doc-version: "July 19, 2026 | Version 0.2"
 format:
   pdf:
     number-sections: false
@@ -19,9 +19,11 @@ filters:
   - preregtemplate.lua
 ---
 
+*Not every question in this template applies to every study, and some cannot be answered before the data are collected. Leaving a question open is acceptable. If you do, state briefly why. Where a choice depends on the data, consider pre-registering the decision rule instead of the decision itself.*
+
 # Part A: General Information {.unnumbered .unlisted}
 
-## Summary of the study 
+## Summary of the study
 
 *Provide a summary of the whole study/survey and provide details that are relevant to understand the background of the study and survey in general. This can be extensive if necessary but should be kept brief.*
 
@@ -45,7 +47,7 @@ H7: Providing additional information on the effect of naturalness of urban green
 
 ## What is the format of the survey instrument?
 
-*Elaborate on the survey instrument. Subquestions could be: Is it online or offline? Is the survey programmed by you or by an external company? Who is collecting the data? How long is the questionnaire?*
+*Elaborate on the survey instrument. Sub-questions could be: Is it online or offline? Is the survey programmed by you or by an external company? Who is collecting the data? How long is the questionnaire?*
 
 ::: {.content-visible when-profile="answers"}
 The survey is carried out online with a web questionnaire designed in “LimeSurvey”. The data is collected by the survey company “IMUG” from a representative panel provided by Gapfish.
@@ -56,7 +58,7 @@ The survey is carried out online with a web questionnaire designed in “LimeSur
 *Describe your sampling strategy in detail and provide reasons for it. If it was not a random sample, why not? Are you using quotas to achieve a representative sample? Who is your target population? Do you use screening questions?*
 
 ::: {.content-visible when-profile="answers"}
-The sample should be representative at the country level with respect to gender, monthly household income, and age. We ensure this by using quotas. The sample only consists of people who live in a rented apartment or house. People who live in their own apartment or house were screened out at the beginning of the survey.
+The sample should be representative at the country level with respect to gender, and age. We ensure this by using quotas. The sample only consists of people who live in a rented apartment or house. People who live in their own apartment or house were screened out at the beginning of the survey.
 :::
 
 ## How did you incentivize your sample?
@@ -64,7 +66,7 @@ The sample should be representative at the country level with respect to gender,
 *Describe how respondents are compensated for completing the questionnaire. If you use individual incentives (e.g. as in a real choice experiment), explain how it works.*
 
 ::: {.content-visible when-profile="answers"}
-Respondents receive a payment for completing the questionnaire. The payment procedure is handled by the survey company.
+Respondents receive a payment for completing the questionnaire. The payment procedure is handled by the survey company. We were not informed about the amount the respondents received for completing the survey.
 :::
 
 ## How did you determine the sample size?
@@ -87,12 +89,12 @@ Our target sample size is N = 800. The sample size is primarily constrained by t
 :::
 
 
-## Did you conduct any pre-studies to develop the choice experiment and questionnaire? 
+## Did you conduct any pre-studies to develop the choice experiment and questionnaire?
 
 *Describe the procedure to develop your questionnaire. This could include focus groups, expert interviews, a research project etc.*
 
 ::: {.content-visible when-profile="answers"}
-We draw from the two earlier studies. The results from the earlier studies are accepted for publication in Land Economics. The earlier studies were extensively pre-tested as described in the paper “The value of naturalness of urban green spaces: Evidence from a discrete choice experiment”:
+We draw from the two earlier studies. The results from the earlier studies are published in Land Economics. The earlier studies were extensively pre-tested as described in the paper “The value of naturalness of urban green spaces: Evidence from a discrete choice experiment”:
 “[...] the survey was pretested from the 15th of April 2020 to the 21st of April 2020 with 520 participants, of which 264 respondents answered the pretest completely. We used this pretest sample to assess the suitability of our survey, the comprehensibility of the questions, and to design the choice sets.”
 
 and
@@ -100,7 +102,7 @@ and
 “The graphical scale was originally developed by several expert panel meetings of biologists and economists to reflect an increasing index of biodiversity and ecosystem services (such as water purification and carbon sequestration). It was validated and slightly revised in the three focus group discussions, where respondents were asked among the others (i) “What do you understand by the term ‘naturalness’? (ii) “What characteristics does a near-natural green space have for you?” (iii) rank the five illustrations by the degree of naturalness.”
 
 
-Bronnmann, Julia, Liebelt, Veronika, Marder, Fabian, Meya, Jasper and Quaas, Martin F., 2022 “The Value of Naturalness of Urban Green Spaces: Evidence From a Discrete Choice Experiment”, Land Economics (2023)  	
+Bronnmann, Julia, Liebelt, Veronika, Marder, Fabian, Meya, Jasper and Quaas, Martin F., 2023 “The Value of Naturalness of Urban Green Spaces: Evidence From a Discrete Choice Experiment”, Land Economics  	
 
 
 
@@ -115,7 +117,7 @@ We have also conducted a pre-test with N=200. Based on the results, we slightly 
 *Criteria to determine and exclude outliers should be specified before survey conduction. Criteria could be related for example to survey time. *
 
 ::: {.content-visible when-profile="answers"}
-We do not plan to exclude any observations from respondents who have completed the whole survey. We will not include observations from respondents who did not complete the survey.
+We exclude speeders. A respondent counts as a speeder if the total completion time is below one third of the median completion time in the realised sample, or if the respondent spends less than five seconds on more than half of the ten choice sets. We also exclude respondents who provide a monthly rent outside the range of 50€ to 15000€. Observations from respondents who did not complete the survey are not included. We report how many respondents each rule removes and re-estimate the main model on the unrestricted sample as a robustness check.
 
 :::
 
@@ -125,7 +127,7 @@ We do not plan to exclude any observations from respondents who have completed t
 *In surveys, some data points may be missing, e.g. if respondents do not answer a specific question. One can exclude such respondents or use imputation methods. Explain your strategy. *
 
 ::: {.content-visible when-profile="answers"}
-We will exclude respondents who have not responded to variables which we use in our models.
+The questionnaire requires an answer before a respondent can continue, so item non-response is limited to the optional income question. Where income is missing we drop the respondent from models using income, but keep them in all other models, and we report the resulting sample size per model.
 
 :::
 
@@ -133,7 +135,7 @@ We will exclude respondents who have not responded to variables which we use in 
 
 *Data and code sharing are essential for replicable research and strongly encouraged. 
 Describe where you plan to make data and code available (e.g., OSF, Zenodo, GitHub, 
-Harvard Dataverse). If sharing is not possible, provide a reason — common restrictions 
+Harvard Dataverse). If sharing is not possible, provide a reason. Common restrictions 
 include contractual obligations with survey companies, privacy regulations (e.g., GDPR), 
 or confidentiality agreements. Consider whether anonymized data could be shared instead.*
 
@@ -158,20 +160,14 @@ a supplementary file with the paper and on OSF.
 
 
 ## How do you plan to handle deviations from this pre-registration?
-
-*Deviations from a pre-registration are common and not inherently problematic; 
-they can occur due to unforeseen events during data collection, errors detected 
-in the pre-registration itself, information that was missing or underspecified, 
-untested assumptions about respondent behaviour that turn out to be violated, 
-or auxiliary assumptions (e.g. distributional or model assumptions) that are 
-falsified once the data are available [@lakens2024and]. For each deviation that 
-occurs, document (1) what was planned and what was done instead, and why, and 
-(2) whether the deviation is likely to reduce how conclusively your test 
-supports or falsifies your hypotheses, or whether it instead increases the 
-validity of your conclusions. You do not need to anticipate every possible 
-deviation here, but please describe how and where you intend to document 
-deviations should they arise (e.g. in a supplementary file, an amendment to 
-the registration, or in the paper itself).*
+*A pre-registration records your intended design and analysis before the data are
+collected. Because some things cannot be foreseen at this stage, you may later find
+that a deviation is warranted. For example an unforeseen event during data
+collection, an error or gap discovered in the plan, or an assumption (about
+respondent behaviour, a distribution, or model convergence) that does not hold once
+the data are in [@lakens2024]. Deviations are not in themselves a problem; what matters is that any deviation is reported transparently and kept distinct from the analyses you planned in advance. You are not asked to predict specific deviations. Instead, please state where and how you would document any deviation should one arise (e.g. an amendment to the registration, a supplementary file, or the paper
+itself), noting briefly what was planned, what was done instead and why, and whether
+the change weakens or strengthens the resulting conclusions.*
 
 ::: {.content-visible when-profile="answers"}
 We do not anticipate major deviations from this plan. If deviations do occur, 
@@ -214,7 +210,7 @@ The design stage includes selection of attributes, a clear definition of the cho
 In the setting of the choice experiment, the respondents are told that they should imagine that the local city authorities are planning to restructure the individually most visited urban green space of the respondent. The restructuring affects the naturalness of the green space and the walking distance to the green space. In the choice situation, the respondents can choose between the status quo and two alternative restructuring programs, which come with additional monthly costs via the incidental rental...
 :::
 
-##  Which attributes (and respective levels) are you using?
+## Which attributes (and respective levels) are you using?
 
 *For each attribute in your survey, provide a clear and concise description, 
 and explain each level if needed. Attributes and levels should reflect the 
@@ -260,7 +256,7 @@ where calculated during survey conduction.
 :::
 
 
-##  List the number of alternatives per choice set, the number of choice sets in total and any blocks or random assignments if applicable:
+## List the number of alternatives per choice set, the number of choice sets in total and any blocks or randomisation.
 
 *You can use a table here. In cases that the number of alternatives varies, or that you use different split samples for different attributes, elaborate this here.*
 
@@ -269,7 +265,7 @@ There are three alternatives per choice set and 30 choice sets in total. The cho
 :::
 
 
-##  How did you code your attributes to generate your design?
+## How did you code your attributes to generate your design?
 
 *This is specific for your design. Which coding did you use to generate your design. Examples are dummy coding, linear, relative to a status quo, etc.*
 
@@ -279,7 +275,7 @@ In the design, the attributes were coded linearly with the relative values.
 
 
 
-##  Did you integrate socio-demographic and other case-specific variables in the design process, and if yes how?
+## Did you integrate socio-demographic and other case-specific variables in the design process, and if yes how?
 
 
 *Case-specific variables are variables that do not vary between alternatives but vary across respondents. These variables could include all variables that you plan to integrate into your utility function, including dummies for split samples. If not applicable, leave blank.*
@@ -293,7 +289,7 @@ We need the treatment dummies to test H5. We need the respondent’s city and so
 *Do you use a utility maximization framework? How do you specify interaction variables? Do you use non-linear specifications of some attributes (e.g. logarithm, quadratic)?*
 
 ::: {.content-visible when-profile="answers"}
-We assumed a multinomial logit model with continuous attributes. We assumed that people choose according to random utility maximization.
+We assumed a multinomial logit model, linear and additive in the attributes, with naturalness, walking distance and monthly rent all entering as continuous variables. We assumed respondents choose the alternative giving them the highest utility.
 :::
 
 ## How did you create your experimental design?
@@ -301,15 +297,24 @@ We assumed a multinomial logit model with continuous attributes. We assumed that
 *When you do your design with a specific software (NGENE, `spdesign` in R [@spdesign] etc.), describe all assumptions (utility specification, optimization routine etc.). See for example @scarpa2008design for reporting guidelines of efficient designs.*
 
 ::: {.content-visible when-profile="answers"}
-The design used was orthogonal, and it was based on priors taken from a previous study conducted in 2020. The design included two unlabeled alternatives ("Program 1", "Program 2") and one status quo ("My current situation").
+The design used was orthogonal. The design included two unlabeled alternatives ("Program 1", "Program 2") and one status quo ("My current situation").
 :::
 
 ## If an efficient design, which priors did you use, and how did you obtain them?
 
-*Some researchers use small priors indicating the sign of the parameters, others use priors based on assumptions or previous studies. Be concise and transparent which ones you use. See for example @BLIEMER2016 and @walker2018d.*
+*State where the priors came from. For example, an assumption about the sign of the parameters, a
+pilot, focus groups or expert interviews, or a previous study. If from a pilot, say how
+many respondents it had and whether the design was updated afterwards. An efficient
+design is only adequate if the priors are approximately right; a design optimised for
+the wrong priors can perform worse than an orthogonal one [@walker2018d]. If you are
+uncertain, consider a Bayesian efficient design, which integrates over a distribution of
+likely parameter values rather than fixed ones [@kessels2006comparison]. See also
+@BLIEMER2016. Consider simulations (see next question) to test the designs against different true data generating processes.*
 
 ::: {.content-visible when-profile="answers"}
-We used the priors obtained from the pretesting phase, which involved a detailed analysis of initial responses to refine the utility functions.
+Not applicable. We used an orthogonal design, so no priors entered the design generation. We used the sign expectations from Bronnmann (2023) to check that no choice set contained a dominated alternative.
+
+Bronnmann, Julia, Liebelt, Veronika, Marder, Fabian, Meya, Jasper and Quaas, Martin F., 2023 “The Value of Naturalness of Urban Green Spaces: Evidence From a Discrete Choice Experiment”, Land Economics 
 :::
 
 ## Did you test the design, e.g., with simulation?
@@ -317,7 +322,9 @@ We used the priors obtained from the pretesting phase, which involved a detailed
 *Monte-Carlo simulations are a good way to test the design for unbiasedness, power and efficiency, and can help you to justify your design choice. In R you can use* `simulateDCE` [@simulateDCE]. *If you did not use simulation, describe how you decided for the design you choose and what other designs you have compared it to.*
 
 ::: {.content-visible when-profile="answers"}
-No, the design was not tested with simulation but was based on theoretical constructs and previous empirical evidence.
+The orthogonal design was tested against an efficient and a Bayesian efficient design with priors taken from Bronnmann 2023. We used simulations under different data generating processes. Overall the orthogonal design turned out to be the most robust design, still giving unbiased estimates. The full simulation code is appended to this pre-registration.
+
+Bronnmann, Julia, Liebelt, Veronika, Marder, Fabian, Meya, Jasper and Quaas, Martin F., 2023 “The Value of Naturalness of Urban Green Spaces: Evidence From a Discrete Choice Experiment”, Land Economics
 :::
 
 ## Do you use an additional split sample approach (between-subject design)?
@@ -335,7 +342,7 @@ In the information treatment, the respondents read an explanatory paragraph of t
 *In most cases, it is recommended to randomize the order of choice sets, alternatives and attributes [@mariel2021environmental, pp.40 and 94] to avoid undesired effects (e.g. left right bias). Note down if you do this, or if you do not do this, explain why not.*
 
 ::: {.content-visible when-profile="answers"}
-We randomize the order of the choice sets but not the attributes to maintain consistency across sessions.
+We randomise the order of choice sets across respondents. The order of attributes is fixed so that every choice set displays them in the same row order, and the status quo always appears as the third alternative.
 :::
 
 ## Do you use an opt-out option or a status quo?
@@ -343,7 +350,7 @@ We randomize the order of the choice sets but not the attributes to maintain con
 *State if you use an opt-out or status quo alternative as an alternative in your choice set. If you do not use any, you can state that you use a forced choice experiment.*
 
 ::: {.content-visible when-profile="answers"}
-Yes, a status quo option is used, defined based on the responses given by the individual participant at an earlier stage in the questionnaire.
+Yes. Each choice set contains the respondent's own status quo alternative alongside the two restructuring programs. We do not use an additional opt-out.
 :::
 
 ## How do you define the status quo?
@@ -351,7 +358,7 @@ Yes, a status quo option is used, defined based on the responses given by the in
 *The definition of the status quo is crucial for the interpretation of the results. Note down how it is described to the respondents.*
 
 ::: {.content-visible when-profile="answers"}
-The status quo is defined as the current situation of the respondent regarding the attributes being studied.
+Respondents first name their most visited urban green space, then report their walking time to it and their current monthly rent, and indicate its naturalness from a set of five graphical illustrations. These answers are piped into the status quo alternative, so each respondent sees their own current situation.
 :::
 
 ## Are your attributes constant or adapt to the status quo?
@@ -376,7 +383,7 @@ No additional remarks.
 
 Estimation in choice experiments often involves decisions that cannot, and should not, be fixed before seeing the data. This section therefore asks less for binding commitments than for your planned strategy: the models and specifications you intend to explore, the rules you will use to choose among them, and how you will handle deviations if the planned strategy does not work as expected.
 
-## Which software do you use for estimation:
+## Which software do you use for estimation?
 
 *Name the software and version that you plan to use. If you use different softwares for different purposes or to cross check results, you can describe that here.*
 
@@ -399,7 +406,16 @@ We use z-Tests at a 5% level, employing robust standard errors to account for th
 *Here, you can list all models that you plan to estimate. Often, the final model choice is an empirical question, and it is totally fine to leave it open which model you will finally use. However, you can still state which models, and which specifications, you estimate and compare to each other. It is also possible to provide a decision tree, containing logical IF-THEN rules.*
 
 ::: {.content-visible when-profile="answers"}
-We rely on random utility theory and estimate random parameters logit models, conditional logit models, and latent class logit models. We select models based on out-of-sample predictions and measures of fit. If applicable, we use likelihood-ratio tests to compare models. 
+We rely on random utility theory and estimate random parameters logit models, conditional logit models, and latent class logit models. We select models based on out-of-sample predictions and measures of fit. If applicable, we use likelihood-ratio tests to compare models.
+:::
+
+
+## Do you estimate in preference space or in willingness to pay space?
+
+*If you derive willingness to pay values, state whether you estimate in preference space or directly in willingness to pay space. The two parameterisations are theoretically equivalent but behave differently in practice: models in preference space can produce poorly behaved, sometimes extreme willingness to pay distributions when the cost coefficient is random, whereas models in willingness to pay space give better behaved welfare estimates but can be harder to converge [@train2005discrete]. If the choice depends on the data, state the criterion you will use to decide.*
+
+::: {.content-visible when-profile="answers"}
+We estimate mixed logit models in both preference space and willingness to pay space. We report willingness to pay space as our main specification if the model converges and fit is comparable to the preference space model; otherwise we report preference space and derive willingness to pay from the ratio of coefficients, discussing the resulting distribution.
 :::
 
 
@@ -422,10 +438,10 @@ We estimate one model for each of the 14 cities where we are conducting the choi
 
 ## Do you derive any welfare measures and how?
 
-*Welfare measures can be compensated or equivalent measures, willingness to pay or others. Explain which ones you want to use and how you calculate them.*
+*Welfare measures can be compensated or equivalent measures, willingness to pay, willingness to accept or others. Explain which ones you want to use and how you calculate them.*
 
 ::: {.content-visible when-profile="answers"}
-We are interested in obtaining willingness to pay values for the attributes naturalness and walking distance
+We derive marginal willingness to pay for naturalness and walking distance as the ratio of the attribute coefficient to the rent coefficient. In willingness to pay space we estimate these ratios directly. For preference space models, we report standard errors and confidence intervals from the delta method.
 :::
 
 
@@ -443,7 +459,7 @@ We want to compare the effects of the different information treatments. To do so
 *Sometimes, you have already some other ideas on what to do with the data but are not specific about it. Here, you can elaborate on this.*
 
 ::: {.content-visible when-profile="answers"}
-We want to include some attitudinal statements which we model with hybrid choice models.
+The survey included a block on nature relatedness with 6 items. We want to include a nature relatedness index as interaction terms in a mixed logit model and also model nature relatedness and choices simultaneously with hybrid choice models.
 :::
 
 
