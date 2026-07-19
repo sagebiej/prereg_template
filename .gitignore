@@ -10,3 +10,8 @@
 overleaf_paper
 template/
 *.Rproj
+
+# Zenodo release script: kept out of the public repo
+zenodo_man.R
+# never commit secrets, even if a project-level one is created later
+.Renviron
